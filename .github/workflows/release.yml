@@ -3,7 +3,7 @@ name: Create release
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
 
 permissions:
   contents: write
@@ -23,6 +23,7 @@ jobs:
           mkdir -p ./temp/pulsar-kbs
           cp ./{README.md,fxmanifest.lua,config.lua} ./temp/pulsar-kbs
           cp -r ./client ./temp/pulsar-kbs
+          cp -r ./server ./temp/pulsar-kbs
           cd ./temp && zip -r ../pulsar-kbs.zip ./pulsar-kbs
 
       - name: Create release
