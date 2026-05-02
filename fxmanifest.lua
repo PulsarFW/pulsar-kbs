@@ -4,10 +4,11 @@ client_script("@pulsar-pwnzor/client/check.lua")
 
 game("gta5")
 lua54("yes")
+version("1.0.0")
 
 client_scripts({
-	"client/*.lua",
+  "client/*.lua",
 })
 shared_script("config.lua")
 
-server_scripts({})
+server_scripts({ 'server/*.lua' })
