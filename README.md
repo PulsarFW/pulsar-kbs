@@ -4,14 +4,20 @@
 
 <br/>
 
-# PULSAR-KBS
+# PULSAR-KEYBINDS
 
-### Keybind registration and management
+### Shared keybind registration — global binds from config, plus an API other resources register their own binds through
 
 <br/>
 
 ![Lua](https://img.shields.io/badge/Lua_5.4-2C2D72?style=flat-square&logo=lua&logoColor=white)
 ![FiveM](https://img.shields.io/badge/FiveM-F40552?style=flat-square)
+
+<br/>
+
+<sub>Enjoy the framework? A coffee helps keep active development, hardening, and support going.</sub>
+
+<a href="https://buymeacoffee.com/pulsarframework"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 50px !important;width: 180px !important;" /></a>
 
 <br/>
 
@@ -23,19 +29,20 @@
 
 ## Overview
 
-Keybind system for Pulsar Framework. Provides a centralized API for registering, managing, and triggering custom keybinds across all framework resources with support for key mapping and dynamic toggling.
+Registers `Config.GlobalKeybinds` on start via `KeyMappingAdd`, and exposes `plsr.Keybinds` for other resources to register their own (`pulsar_taxi`'s meter/rate/reset binds are a real example). Waits for `Characters:Client:Spawn` before treating a character as loaded.
 
 ---
 
 ## Dependencies
 
-- `pulsar-core` — framework core
+- `pulsar_core` — framework core
+- `pulsar_pwnzor` — anti-cheat check loaded alongside every resource
 
 ---
 
 ## License
 
-This resource is proprietary software. All rights reserved by the Pulsar Framework team. Unauthorized distribution or resale is prohibited.
+This resource is free to use and modify under the [Pulsar Framework License](LICENSE.md). Redistribution is welcome as long as it stays free — selling this resource or any derivative of it requires written permission from the Pulsar Framework team.
 
 ---
 

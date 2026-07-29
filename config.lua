@@ -1,8 +1,8 @@
 Config = {
 	GlobalKeybinds = {
 		["primary_action"] = {
-			defaultKey = "mouse_right",
-			defaultPad = "mouse_button",
+			defaultKey = "e",
+			defaultPad = "keyboard",
 			description = "Actions - Primary Key",
 		},
 		["secondary_action"] = {
@@ -18,7 +18,7 @@ Config = {
 	},
 }
 
-_keyStrings = {
+_dumbFuckingKeyStrings = {
 	--[[ TODO: All the controller stuff
     b_0 = '',
     b_1 = '',
